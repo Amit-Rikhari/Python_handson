@@ -60,3 +60,50 @@ if __name__ == '__main__':
     arr = list(map(int, input().split()))
     result = average(arr)
     print(result)
+
+#29 June
+
+# Problem 4:
+# In the first line, print True if  has any alphanumeric characters. Otherwise, print False.
+# In the second line, print True if  has any alphabetical characters. Otherwise, print False.
+# In the third line, print True if  has any digits. Otherwise, print False.
+# In the fourth line, print True if  has any lowercase characters. Otherwise, print False.
+# In the fifth line, print True if  has any uppercase characters. Otherwise, print False.
+
+def a(s):
+    if any(char.isalnum() for char in s):
+        print("True")
+    else:
+        print("False")
+
+def b(s):  
+    if any(char.isalpha() for char in s):
+        print("True")
+    else:
+        print("False")
+
+def c(s):  
+    if any(char.isdigit() for char in s):
+        print("True")
+    else:
+        print("False")
+
+def d(s):   
+    if any(char.islower() for char in s):
+        print("True")
+    else:
+        print("False")
+
+def e(s):  
+    if any(char.isupper() for char in s):
+        print("True")
+    else:
+        print("False")
+
+if __name__ == '__main__':
+    s = input("")
+    a(s)
+    b(s)
+    c(s)
+    d(s)
+    e(s)

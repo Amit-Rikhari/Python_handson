@@ -107,3 +107,25 @@ if __name__ == '__main__':
     c(s)
     d(s)
     e(s)
+
+#01 July
+#problem 5
+#Given an integer, , print the following values for each integer  from  to :
+
+# Decimal
+# Octal
+# Hexadecimal (capitalized)
+# Binary
+
+def print_formatted(number):
+    width = len(bin(number)[2:])
+    for i in range(1, number + 1):
+        dec = i
+        octa = oct(i)[2:]
+        dexa = hex(i)[2:].upper()
+        bina = bin(i)[2:]
+        print(f"{dec:>{width}} {octa:>{width}} {dexa:>{width}} {bina:>{width}}")
+
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(n)

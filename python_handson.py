@@ -138,3 +138,21 @@ n = int(input())
 integer_list = map(int, input().split())
 t = tuple(integer_list)
 print(hash(t))
+###Problm 7
+# Mr. Vincent works in a door mat manufacturing company. One day, he designed a new door mat with the following specifications:
+
+# Mat size must be X. ( is an odd natural number, and  is  times .)
+# The design should have 'WELCOME' written in the center.
+# The design pattern should only use |, . and - characters.
+
+def print_door_mat(N, M):
+    pattern = [('.|.'*(2*i + 1)).center(M, '-') for i in range(N//2)]
+    welcome_line = 'WELCOME'.center(M, '-')
+    mat = pattern + [welcome_line] + pattern[::-1]
+    for line in mat:
+        print(line)
+
+# Example usage:
+N = 7
+M = 3 * N
+print_door_mat(N, M)

@@ -156,3 +156,27 @@ def print_door_mat(N, M):
 N = 7
 M = 3 * N
 print_door_mat(N, M)
+
+# P8: Nested Lists
+# link - https://www.hackerrank.com/challenges/nested-list/problem
+
+list_=[]
+for _ in range(int(input())):
+    name = input()
+    score = float(input())
+    list_.append([name,score])
+second=sorted(list(set([score for name,score in list_])))[1]
+print('\n'.join(sorted(list(set([name for name,score in list_ if score==second])))))
+
+
+
+
+
+
+
+
+
+
+
+
+
